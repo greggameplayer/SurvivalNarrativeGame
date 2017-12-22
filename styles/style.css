@@ -1,0 +1,23 @@
+#headertitle {
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  top: -15px;
+}
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  background-color:white;
+  box-shadow: 0 3px 3px;
+}
+footer {
+  position: absolute;
+  top: 93.8%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 -2px 5px;
+}
