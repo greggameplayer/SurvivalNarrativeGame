@@ -21,3 +21,24 @@ footer {
   background-color: white;
   box-shadow: 0 -2px 5px;
 }
+#participantchoice{
+  position: absolute;
+  top: 80px;
+  left: 233px;
+}
+#participantchoiceparagraph{
+  position: absolute;
+  top: 62px;
+}
+#participantselection{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: s;
+  flex-basis: 50%;
+  position: absolute;
+  top: 110px;
+  height:800px;
+  width: 400px;
+}
