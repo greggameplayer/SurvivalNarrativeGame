@@ -1,5 +1,4 @@
 var listbox;
-var onloadtest = true;
 function onLoad(){
 	
 	var nbreloop = 2;
@@ -21,7 +20,7 @@ function onLoad(){
 		var optionparticipant = document.getElementById("optionparticipant" + nbreloop);
 		nbreloop2++;		
 	}
-	onloadtest = false;
+	onChangeListbox();
 	listbox.addEventListener("change", onChangeListbox);
 }
 window.addEventListener("load", onLoad);
