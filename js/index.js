@@ -16,6 +16,9 @@
 		var testfield = document.body.contains(document.getElementById("perso" + nbreloop));
 		var ptestfield = document.body.contains(document.getElementById("perso" + nbreloop + "paragraph"));
 		if(testfield == true && ptestfield == true && textdividtest == true){
+			textdivid.removeChild(document.getElementById("buttonfiledialog" + nbreloop));
+			textdivid.removeChild(document.getElementById("separator" + nbreloop));
+			textdivid.removeChild(document.getElementById("paragraphfiledialog" + nbreloop));
 			textdivid.removeChild(document.getElementById("perso" + nbreloop));
 			textdivid.removeChild(document.getElementById("perso" + nbreloop + "paragraph"));
 			participantselectiondiv.removeChild(document.getElementById("textdivparticipant" + nbreloop));
@@ -28,6 +31,17 @@
 		textdivid = document.getElementById("textdivparticipant" + nbreloop);
 		}
 		var ptextfield = document.createElement("p");
+		var separator = document.createElement("hr");
+		var pfiledialog = document.createElement("p");
+		var buttonfiledialog = document.createElement("button");
+		separator.id = "separator" + nbreloop;
+		separator.className = "separatorgroup";
+		pfiledialog.id = "paragraphfiledialog" + nbreloop;
+		pfiledialog.className = "paragraphfiledialoggroup";
+		pfiledialog.innerHTML = "Choisissez une image de profil (64px X 64px) :";
+		buttonfiledialog.id = "buttonfiledialog" + nbreloop;
+		buttonfiledialog.className = "buttonfiledialoggroup";
+		buttonfiledialog.innerHTML = "parcourir";
 		var textfield = document.createElement("INPUT");
 		ptextfield.id = "perso" + nbreloop + "paragraph";
 		ptextfield.className = "persoparagraphgroup";
@@ -37,15 +51,25 @@
 		textfield.setAttribute('type','text');
 		textdivid.appendChild(ptextfield);
 		textdivid.appendChild(textfield);
+		textdivid.appendChild(separator);
+		textdivid.appendChild(pfiledialog);
+		textdivid.appendChild(buttonfiledialog);
+		buttonfiledialog.addEventListener("click", FileDialog);
 		nbreloop++;
 		if(nbreloop > valeur_cherchee){
 			var nbreloop2 = 0;
-			while((nbreloop + nbreloop2) <= 50){
+			while((nbreloop + nbreloop2) <= 12){
 		if(document.body.contains(document.getElementById("textdivparticipant" + (nbreloop + nbreloop2))) == true){
 		var textdividtest2 = document.getElementById("textdivparticipant" + (nbreloop + nbreloop2));
 		var testfieldnext = document.body.contains(document.getElementById("perso" + (nbreloop + nbreloop2)));
+		var testseparator = document.body.contains(document.getElementById("separator" + (nbreloop + nbreloop2)));
+		var testbuttonfiledialog = document.body.contains(document.getElementById("buttonfiledialog" + (nbreloop + nbreloop2)));
+		var testpfiledialog = document.body.contains(document.getElementById("paragraphfiledialog" + (nbreloop + nbreloop2)));
 		var ptestfieldnext = document.body.contains(document.getElementById("perso" + (nbreloop + nbreloop2) + "paragraph"));	
-		if(testfieldnext == true && ptestfieldnext == true){
+		if(testfieldnext == true && ptestfieldnext == true && testseparator == true && testpfiledialog == true && testbuttonfiledialog == true){
+			textdividtest2.removeChild(document.getElementById("buttonfiledialog" + (nbreloop + nbreloop2)));
+			textdividtest2.removeChild(document.getElementById("separator" + (nbreloop + nbreloop2)));
+			textdividtest2.removeChild(document.getElementById("paragraphfiledialog" + (nbreloop + nbreloop2)));
 			textdividtest2.removeChild(document.getElementById("perso" + (nbreloop + nbreloop2)));
 			textdividtest2.removeChild(document.getElementById("perso" + (nbreloop + nbreloop2) + "paragraph"));
 			participantselectiondiv.removeChild(document.getElementById("textdivparticipant" + (nbreloop + nbreloop2)));

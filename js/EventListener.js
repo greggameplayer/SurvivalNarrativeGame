@@ -7,7 +7,7 @@ function onLoad(){
 	var plistbox = document.createElement("p");
 	plistbox.id = "participantchoiceparagraph";
 	plistbox.innerHTML = "Choisir le nombre de participants :";
-	while(nbreloop <= 49){
+	while(nbreloop <= 11){
 		var addoption = document.createElement("option");
 		addoption.id = "optionparticipant" + (nbreloop + 1);
 		addoption.text = nbreloop + 1;
@@ -16,7 +16,7 @@ function onLoad(){
 		nbreloop++;
 	}
 	document.body.appendChild(plistbox);
-	while(nbreloop2 <= 50){
+	while(nbreloop2 <= 12){
 		var optionparticipant = document.getElementById("optionparticipant" + nbreloop);
 		nbreloop2++;		
 	}

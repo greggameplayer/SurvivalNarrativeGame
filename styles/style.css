@@ -50,3 +50,7 @@ footer {
   border-style: solid;
   border-radius: 5px;
 }
+.buttonfiledialoggroup{
+  height: 25px;
+  width: 100px;
+}
