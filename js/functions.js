@@ -1,6 +1,9 @@
-var nbrefiledialog = 0;
-var filedialog = [];
-function FileDialog()
+var nbrefiledialog = 0; // permet de compter les image valide pour les placer dans un tableau
+var filedialog = []; // tableau contenant les images valide
+// 																	Permet d'ouvrir la fenêtre de dialogue dans le but de selectionner une image de 64x64px 																		 //
+// 															et créer un événement onChange pour détécter la fermeture et executer la fonction OnOpenFileDialogChange																 //
+//																												↓↓↓																												     //
+function FileDialog()  
 {
 
     var openfiledialog = document.getElementById("openfiledialog");
@@ -8,20 +11,13 @@ function FileDialog()
 	openfiledialog.addEventListener("change", OnOpenFileDialogChange);
 
 }
-function OnOpenFileDialogChange()
+//																			   Permet d'afficher les images valide dans les canvas prévu a cet effet																				 //
+//																												↓↓↓ 																												 //
+function displayImg(imgSrc)
 {
-		if(openfiledialog.getAttribute('height') == "" || openfiledialog.getAttribute('height') == 0){
-		window.alert("votre fichier n'est pas une image ou a une hauteur égale à 0");
-	}else{
-	if((openfiledialog.getAttribute('height') < 64 && openfiledialog.getAttribute('width') < 64) || (openfiledialog.getAttribute('height') > 64 && openfiledialog.getAttribute('width'))){
-		window.alert("votre image est inférieur à la taille requise (64x64)");
-	}else{
-		filedialog[nbrefiledialog] = openfiledialog;
-		nbrefiledialog++;
-	}
-	}
+	
 }
-//------------------------------------------------------
+
 function ThreePlayers()
 {
 }
