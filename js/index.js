@@ -21,6 +21,9 @@
 			textdivid.removeChild(document.getElementById("paragraphfiledialog" + nbreloop));
 			textdivid.removeChild(document.getElementById("perso" + nbreloop));
 			textdivid.removeChild(document.getElementById("perso" + nbreloop + "paragraph"));
+			if(document.body.contains(document.getElementById("space" + nbreloop))){
+			participantselectiondiv.removeChild(document.getElementById("space" + nbreloop));
+			}
 			participantselectiondiv.removeChild(document.getElementById("textdivparticipant" + nbreloop));
 		}
 		if(document.body.contains(document.getElementById("textdivparticipant" + nbreloop)) == false){
@@ -34,6 +37,7 @@
 		var separator = document.createElement("hr");
 		var pfiledialog = document.createElement("p");
 		var buttonfiledialog = document.createElement("button");
+		var space = document.createElement("div"); //replace with a div with &nbsp; inside
 		separator.id = "separator" + nbreloop;
 		separator.className = "separatorgroup";
 		pfiledialog.id = "paragraphfiledialog" + nbreloop;
@@ -42,6 +46,8 @@
 		buttonfiledialog.id = "buttonfiledialog" + nbreloop;
 		buttonfiledialog.className = "buttonfiledialoggroup";
 		buttonfiledialog.innerHTML = "parcourir";
+		space.id = "space" + nbreloop;
+		space.className = "spacegroup";
 		var textfield = document.createElement("INPUT");
 		ptextfield.id = "perso" + nbreloop + "paragraph";
 		ptextfield.className = "persoparagraphgroup";
@@ -54,6 +60,9 @@
 		textdivid.appendChild(separator);
 		textdivid.appendChild(pfiledialog);
 		textdivid.appendChild(buttonfiledialog);
+		if(nbreloop != valeur_cherchee){
+			participantselectiondiv.appendChild(space);
+		}
 		buttonfiledialog.addEventListener("click", FileDialog);
 		nbreloop++;
 		if(nbreloop > valeur_cherchee){
@@ -72,6 +81,9 @@
 			textdividtest2.removeChild(document.getElementById("paragraphfiledialog" + (nbreloop + nbreloop2)));
 			textdividtest2.removeChild(document.getElementById("perso" + (nbreloop + nbreloop2)));
 			textdividtest2.removeChild(document.getElementById("perso" + (nbreloop + nbreloop2) + "paragraph"));
+			if(document.body.contains(document.getElementById("space" + (nbreloop + nbreloop2)))){
+			participantselectiondiv.removeChild(document.getElementById("space" + (nbreloop + nbreloop2 )));
+			}
 			participantselectiondiv.removeChild(document.getElementById("textdivparticipant" + (nbreloop + nbreloop2)));
 		}		
 		}
