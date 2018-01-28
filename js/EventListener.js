@@ -1,4 +1,8 @@
-var listbox;
+var listbox;// initialisation de la variable listbox servant à stocker l'élément #participantchoice
+
+//                                          Fonction effectué au chargement permettant de créer toutes les options de choix de la listbox et de rediriger vers un événement détectant
+//                                                                       					un changement de selection dans la listbox 
+//                                                                                                              ↓↓↓
 function onLoad(){
 	
 	var nbreloop = 2;
@@ -25,6 +29,9 @@ function onLoad(){
 }
 window.addEventListener("load", onLoad);
 
+//                                              Fonction permettant de restreindre le choix d'une extension du fichier à .jpg ou .png ou .gif mais aussi de restreindre la taille
+//                                                    à une image de 64 pixels x 64 pixels et de récupérer le fichier dans un tableau si les conditions requise sont valide
+//                                                                                                              ↓↓↓
 function OnOpenFileDialogChange()
 {
 	var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(.jpg|.png|.gif)$");
@@ -55,6 +62,7 @@ function OnOpenFileDialogChange()
 							}
 						}else{
 							window.alert("l'image est valide et a été upload");
+							document.getElementById("buttonfiledialog" + (nbrefiledialog + 1)).disabled = true;
 							filedialog[nbrefiledialog] = openfiledialog;
 							displayImg(image.src);
 							nbrefiledialog++;
