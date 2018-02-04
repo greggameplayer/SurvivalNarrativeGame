@@ -63,7 +63,7 @@
 		if(nbreloop != valeur_cherchee){
 			participantselectiondiv.appendChild(space);
 		}
-		buttonfiledialog.addEventListener("click", FileDialog);
+		buttonfiledialog.addEventListener("click", function(){FileDialog(this.id);});
 		nbreloop++;
 		if(nbreloop > valeur_cherchee){
 			var nbreloop2 = 0;

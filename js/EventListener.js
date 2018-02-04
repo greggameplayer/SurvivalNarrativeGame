@@ -1,5 +1,5 @@
 var listbox;// initialisation de la variable listbox servant à stocker l'élément #participantchoice
-
+var nbrefile = 1;
 //                                          Fonction effectué au chargement permettant de créer toutes les options de choix de la listbox et de rediriger vers un événement détectant
 //                                                                       					un changement de selection dans la listbox 
 //                                                                                                              ↓↓↓
@@ -62,10 +62,14 @@ function OnOpenFileDialogChange()
 							}
 						}else{
 							window.alert("l'image est valide et a été upload");
-							document.getElementById("buttonfiledialog" + (nbrefiledialog + 1)).disabled = true;
-							filedialog[nbrefiledialog] = openfiledialog;
+							
+								
+								filedialog[nbrebuttonsource - 1] = openfiledialog.files[0];
+								nbrebuttonsource = 0;
+									
+								
+							
 							displayImg(image.src);
-							nbrefiledialog++;
 							return true;
 						}
 					};
