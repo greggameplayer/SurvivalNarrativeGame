@@ -23,7 +23,16 @@ openfiledialog.addEventListener("change", OnOpenFileDialogChange);
 //                                                                                                              ↓↓↓
 function displayImg(imgSrc)
 {
-	
+	var nbre = 1;
+		var c=document.getElementById("canvas" + nbre);
+	var context=c.getContext("2d");
+	context.clearRect(0, 0, c.width, c.height);	
+	var img = new Image();
+	img.onload = function () {
+		context.drawImage(img, 65, 65,img.width,img.height,65);
+	}
+	img.src = imgSrc ;   
+	img.id = "canvasslotimg";
 }
 //                                                                                       Permet de dérouler le scénario pour trois joueurs
 //                                                                                                              ↓↓↓

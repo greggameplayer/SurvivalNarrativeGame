@@ -1,5 +1,4 @@
 var listbox;// initialisation de la variable listbox servant à stocker l'élément #participantchoice
-var nbrefile = 1;
 //                                          Fonction effectué au chargement permettant de créer toutes les options de choix de la listbox et de rediriger vers un événement détectant
 //                                                                       					un changement de selection dans la listbox 
 //                                                                                                              ↓↓↓
@@ -34,6 +33,9 @@ window.addEventListener("load", onLoad);
 //                                                                                                              ↓↓↓
 function OnOpenFileDialogChange()
 {
+	var canvas  = document.getElementById("canvas1");
+var context = canvas.getContext("2d");
+context.clearRect(0, 0, c.width, c.height);
 	var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(.jpg|.png|.gif)$");
     if (regex.test(openfiledialog.value.toLowerCase())) {
 		if (typeof (openfiledialog.files) != "undefined") {
@@ -61,15 +63,10 @@ function OnOpenFileDialogChange()
 								}	
 							}
 						}else{
-							window.alert("l'image est valide et a été upload");
-							
-								
-								filedialog[nbrebuttonsource - 1] = openfiledialog.files[0];
-								nbrebuttonsource = 0;
-									
-								
-							
-							displayImg(image.src);
+							window.alert("l'image est valide et a été upload");						
+							filedialog[nbrebuttonsource - 1] = openfiledialog.files[0];
+              nbrebuttonsource = 0;
+							context.drawImage(image, 0, 0);
 							return true;
 						}
 					};
@@ -87,4 +84,25 @@ function OnOpenFileDialogChange()
 	
 }
 
+function OnSubmitbuttonClick(){
+	var nbreloopsubmitbutton = 1;
+	while(nbreloopsubmitbutton <= 12){
+	if(document.body.contains(document.getElementById("perso" + nbreloopsubmitbutton)) == true){
+	if(document.getElementById("perso" + nbreloopsubmitbutton).value == ""){
+	window.alert("vous n'avez pas rentré de pseudo dans le champ du perso "+ nbreloopsubmitbutton);
+	return false;
+	}else{		
+	nbreloopsubmitbutton++;
+	if(nbreloopsubmitbutton > 12){
+		document.body.removeChild(document.getElementById("participantselection"));
+	}
+	}
+	
+	}else{
+		
+	document.body.removeChild(document.getElementById("participantselection"));
+	return true;
+	}
+	}
 
+}

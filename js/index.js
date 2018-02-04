@@ -16,6 +16,7 @@
 		var testfield = document.body.contains(document.getElementById("perso" + nbreloop));
 		var ptestfield = document.body.contains(document.getElementById("perso" + nbreloop + "paragraph"));
 		if(testfield == true && ptestfield == true && textdividtest == true){
+			textdivid.removeChild(document.getElementById("canvas" + nbreloop));
 			textdivid.removeChild(document.getElementById("buttonfiledialog" + nbreloop));
 			textdivid.removeChild(document.getElementById("separator" + nbreloop));
 			textdivid.removeChild(document.getElementById("paragraphfiledialog" + nbreloop));
@@ -25,6 +26,9 @@
 			participantselectiondiv.removeChild(document.getElementById("space" + nbreloop));
 			}
 			participantselectiondiv.removeChild(document.getElementById("textdivparticipant" + nbreloop));
+		}
+		if(document.body.contains(document.getElementById("submitbutton")) == true){
+			participantselectiondiv.removeChild(document.getElementById("submitbutton"));
 		}
 		if(document.body.contains(document.getElementById("textdivparticipant" + nbreloop)) == false){
 		var textdiv2 = document.createElement("div");
@@ -37,7 +41,8 @@
 		var separator = document.createElement("hr");
 		var pfiledialog = document.createElement("p");
 		var buttonfiledialog = document.createElement("button");
-		var space = document.createElement("div"); //replace with a div with &nbsp; inside
+		var canvas = document.createElement("canvas");
+		var space = document.createElement("div"); 
 		separator.id = "separator" + nbreloop;
 		separator.className = "separatorgroup";
 		pfiledialog.id = "paragraphfiledialog" + nbreloop;
@@ -46,6 +51,10 @@
 		buttonfiledialog.id = "buttonfiledialog" + nbreloop;
 		buttonfiledialog.className = "buttonfiledialoggroup";
 		buttonfiledialog.innerHTML = "parcourir";
+		canvas.id = "canvas" + nbreloop;
+		canvas.className = "canvasgroup";
+		canvas.height = "64";
+		canvas.width = "64";
 		space.id = "space" + nbreloop;
 		space.className = "spacegroup";
 		var textfield = document.createElement("INPUT");
@@ -60,6 +69,7 @@
 		textdivid.appendChild(separator);
 		textdivid.appendChild(pfiledialog);
 		textdivid.appendChild(buttonfiledialog);
+		textdivid.appendChild(canvas);
 		if(nbreloop != valeur_cherchee){
 			participantselectiondiv.appendChild(space);
 		}
@@ -76,6 +86,7 @@
 		var testpfiledialog = document.body.contains(document.getElementById("paragraphfiledialog" + (nbreloop + nbreloop2)));
 		var ptestfieldnext = document.body.contains(document.getElementById("perso" + (nbreloop + nbreloop2) + "paragraph"));	
 		if(testfieldnext == true && ptestfieldnext == true && testseparator == true && testpfiledialog == true && testbuttonfiledialog == true){
+			textdividtest2.removeChild(document.getElementById("canvas" + (nbreloop + nbreloop2)));
 			textdividtest2.removeChild(document.getElementById("buttonfiledialog" + (nbreloop + nbreloop2)));
 			textdividtest2.removeChild(document.getElementById("separator" + (nbreloop + nbreloop2)));
 			textdividtest2.removeChild(document.getElementById("paragraphfiledialog" + (nbreloop + nbreloop2)));
@@ -85,10 +96,15 @@
 			participantselectiondiv.removeChild(document.getElementById("space" + (nbreloop + nbreloop2 )));
 			}
 			participantselectiondiv.removeChild(document.getElementById("textdivparticipant" + (nbreloop + nbreloop2)));
-		}		
+		}
+
 		}
 		nbreloop2++;
 			}
+		var submitbutton = document.createElement("button");
+		submitbutton.id = "submitbutton";
+		participantselectiondiv.appendChild(submitbutton);
+		submitbutton.addEventListener("click", OnSubmitbuttonClick);
 		}
 	}
 	
