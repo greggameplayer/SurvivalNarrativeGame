@@ -33,9 +33,9 @@ window.addEventListener("load", onLoad);
 //                                                                                                              ↓↓↓
 function OnOpenFileDialogChange()
 {
-	var canvas  = document.getElementById("canvas1");
+	var canvas  = document.getElementById("canvas" + nbrebuttonsource);
 var context = canvas.getContext("2d");
-context.clearRect(0, 0, c.width, c.height);
+context.clearRect(0, 0, context.width, context.height);
 	var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(.jpg|.png|.gif)$");
     if (regex.test(openfiledialog.value.toLowerCase())) {
 		if (typeof (openfiledialog.files) != "undefined") {
@@ -65,7 +65,7 @@ context.clearRect(0, 0, c.width, c.height);
 						}else{
 							window.alert("l'image est valide et a été upload");						
 							filedialog[nbrebuttonsource - 1] = openfiledialog.files[0];
-              nbrebuttonsource = 0;
+							nbrebuttonsource = 0;
 							context.drawImage(image, 0, 0);
 							return true;
 						}

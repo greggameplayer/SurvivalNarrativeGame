@@ -103,6 +103,7 @@
 			}
 		var submitbutton = document.createElement("button");
 		submitbutton.id = "submitbutton";
+		submitbutton.innerHTML = "valider";
 		participantselectiondiv.appendChild(submitbutton);
 		submitbutton.addEventListener("click", OnSubmitbuttonClick);
 		}
