@@ -1,21 +1,38 @@
-var nbrefiledialog = 0; // permet de compter les image valide pour les placer dans un tableau
 var filedialog = []; // tableau contenant les images valide
+var nbrebuttonsource = 0;
 //                                                                  Permet d'ouvrir la fenêtre de dialogue dans le but de selectionner une image de 64x64px
 //                                                          et créer un événement onChange pour détécter la fermeture et executer la fonction OnOpenFileDialogChange
 //                                                                                                              ↓↓↓
-function FileDialog()  
+function FileDialog(buttonobject)  
 {
-
+	var nbreloopbt = 1;
+	while(nbreloopbt != nbrebuttonsource)
+	{
+		if(buttonobject == "buttonfiledialog" + nbreloopbt){
+			nbrebuttonsource = nbreloopbt;
+			nbreloopbt--;
+		}
+		nbreloopbt++;
+	}
     var openfiledialog = document.getElementById("openfiledialog");
 	$("#openfiledialog").trigger('click');
-	openfiledialog.addEventListener("change", OnOpenFileDialogChange);
+openfiledialog.addEventListener("change", OnOpenFileDialogChange);
 
 }
 //                                                                             Permet d'afficher les images valide dans les canvas prévu a cet effet
 //                                                                                                              ↓↓↓
 function displayImg(imgSrc)
 {
-	
+	var nbre = 1;
+		var c=document.getElementById("canvas" + nbre);
+	var context=c.getContext("2d");
+	context.clearRect(0, 0, c.width, c.height);	
+	var img = new Image();
+	img.onload = function () {
+		context.drawImage(img, 65, 65,img.width,img.height,65);
+	}
+	img.src = imgSrc ;   
+	img.id = "canvasslotimg";
 }
 //                                                                                       Permet de dérouler le scénario pour trois joueurs
 //                                                                                                              ↓↓↓
