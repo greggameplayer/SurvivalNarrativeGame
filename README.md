@@ -7,3 +7,4 @@
 
 
 Ceci est un jeu de survie narratif
+dans lequel vous êtes invité à survivre avec une bande d'amis du nombre de votre choix (de 2 à 11 amis) dans une maison hanté
