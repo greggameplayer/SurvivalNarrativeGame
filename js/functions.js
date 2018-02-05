@@ -50,7 +50,7 @@ function ThreePlayers()
 //                                                                                                              ↓↓↓
 function FourPlayers()
 {
-  	var divfourplayers = document.createElement("div");
+	var divfourplayers = document.createElement("div");
 	var pfourplayers = document.createElement("p");
 	pfourplayers.id =  "pfourplayers";
 	pfourplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
@@ -62,7 +62,7 @@ function FourPlayers()
 //                                                                                                              ↓↓↓
 function FivePlayers()
 {
-  	var divfiveplayers = document.createElement("div");
+	var divfiveplayers = document.createElement("div");
 	var pfiveplayers = document.createElement("p");
 	pfiveplayers.id =  "pfiveplayers";
 	pfiveplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
@@ -74,7 +74,7 @@ function FivePlayers()
 //                                                                                                              ↓↓↓
 function SixPlayers()
 {
-  	var divsixplayers = document.createElement("div");
+	var divsixplayers = document.createElement("div");
 	var psixplayers = document.createElement("p");
 	psixplayers.id =  "psixplayers";
 	psixplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
@@ -86,7 +86,7 @@ function SixPlayers()
 //                                                                                                              ↓↓↓
 function SevenPlayers()
 {
-      var divsevenplayers = document.createElement("div");
+	var divsevenplayers = document.createElement("div");
 	var psevenplayers = document.createElement("p");
 	psevenplayers.id =  "psevenplayers";
 	psevenplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
@@ -98,7 +98,7 @@ function SevenPlayers()
 //                                                                                                              ↓↓↓
 function EightPlayers()
 {
-  	var diveightplayers = document.createElement("div");
+	var diveightplayers = document.createElement("div");
 	var peightplayers = document.createElement("p");
 	peightplayers.id =  "peightplayers";
 	peightplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
@@ -110,7 +110,7 @@ function EightPlayers()
 //                                                                                                              ↓↓↓
 function NinePlayers()
 {
-  	var divnineplayers = document.createElement("div");
+	var divnineplayers = document.createElement("div");
 	var pnineplayers = document.createElement("p");
 	pnineplayers.id =  "pnineplayers";
 	pnineplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
@@ -122,7 +122,7 @@ function NinePlayers()
 //                                                                                                              ↓↓↓
 function TenPlayers()
 {
-  	var divtenplayers = document.createElement("div");
+	var divtenplayers = document.createElement("div");
 	var ptenplayers = document.createElement("p");
 	ptenplayers.id =  "ptenplayers";
 	ptenplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
@@ -134,7 +134,7 @@ function TenPlayers()
 //                                                                                                              ↓↓↓
 function ElevenPlayers()
 {
-  var divelevenplayers = document.createElement("div");
+	var divelevenplayers = document.createElement("div");
 	var pelevenplayers = document.createElement("p");
 	pelevenplayers.id =  "pelevenplayers";
 	pelevenplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
@@ -146,7 +146,7 @@ function ElevenPlayers()
 //                                                                                                              ↓↓↓
 function TwelvePlayers()
 {
-  	var divtwelveplayers = document.createElement("div");
+	var divtwelveplayers = document.createElement("div");
 	var ptwelveplayers = document.createElement("p");
 	ptwelveplayers.id =  "ptwelveplayers";
 	ptwelveplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
