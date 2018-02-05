@@ -102,7 +102,7 @@ function EightPlayers()
 	var peightplayers = document.createElement("p");
 	peightplayers.id =  "peightplayers";
 	peightplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
-	diveightplayers.id = "threeplayers";
+	diveightplayers.id = "eightplayers";
 	document.body.appendChild(diveightplayers);
 	diveightplayers.appendChild(peightplayers);
 }

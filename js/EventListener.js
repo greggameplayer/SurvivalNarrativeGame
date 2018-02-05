@@ -84,7 +84,7 @@ context.clearRect(0, 0, context.width, context.height);
 	
 }
 
-function OnSubmitbuttonClick(){
+function OnSubmitbuttonClick(nbreparticipant){
 	var nbreloopsubmitbutton = 1;
 	while(nbreloopsubmitbutton <= 12){
 	if(document.body.contains(document.getElementById("perso" + nbreloopsubmitbutton)) == true){
@@ -95,12 +95,37 @@ function OnSubmitbuttonClick(){
 	nbreloopsubmitbutton++;
 	if(nbreloopsubmitbutton > 12){
 		document.body.removeChild(document.getElementById("participantselection"));
+		document.body.removeChild(listbox);
+		document.body.removeChild(document.getElementById("participantchoiceparagraph"));
 	}
 	}
 	
 	}else{
 		
 	document.body.removeChild(document.getElementById("participantselection"));
+	document.body.removeChild(listbox);
+	document.body.removeChild(document.getElementById("participantchoiceparagraph"));
+	if(parseInt(nbreparticipant) == 3){
+	ThreePlayers();	
+	} else if(nbreparticipant == 4){
+	FourPlayers();	
+	} else if(nbreparticipant == 5){
+	FivePlayers();	
+	} else if(nbreparticipant == 6){
+	SixPlayers();	
+	} else if(nbreparticipant == 7){
+	SevenPlayers();	
+	} else if(nbreparticipant == 8){
+	EightPlayers();	
+	} else if(nbreparticipant == 9){
+	NinePlayers();	
+	} else if(nbreparticipant == 10){
+	TenPlayers();	
+	} else if(nbreparticipant == 11){
+	ElevenPlayers();	
+	} else{
+	TwelvePlayers();	
+	}	
 	return true;
 	}
 	}
