@@ -24,7 +24,7 @@ function ThreePlayers()
 	var divthreeplayers = document.createElement("div");
 	var pthreeplayers = document.createElement("p");
 	pthreeplayers.id =  "pthreeplayers";
-	pthreeplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
+	pthreeplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné <br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
 	divthreeplayers.id = "threeplayers";
 	document.body.appendChild(divthreeplayers);
 	divthreeplayers.appendChild(pthreeplayers);
