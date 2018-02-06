@@ -105,26 +105,26 @@ function OnSubmitbuttonClick(nbreparticipant){
 	document.body.removeChild(document.getElementById("participantselection"));
 	document.body.removeChild(listbox);
 	document.body.removeChild(document.getElementById("participantchoiceparagraph"));
-	if(parseInt(nbreparticipant) == 3){
-	ThreePlayers();	
-	} else if(nbreparticipant == 4){
-	FourPlayers();	
-	} else if(nbreparticipant == 5){
-	FivePlayers();	
-	} else if(nbreparticipant == 6){
-	SixPlayers();	
-	} else if(nbreparticipant == 7){
-	SevenPlayers();	
-	} else if(nbreparticipant == 8){
-	EightPlayers();	
-	} else if(nbreparticipant == 9){
-	NinePlayers();	
-	} else if(nbreparticipant == 10){
-	TenPlayers();	
-	} else if(nbreparticipant == 11){
-	ElevenPlayers();	
+	if(parseInt(nbreparticipant) === 3){
+	threePlayers();	
+	} else if(nbreparticipant === 4){
+	fourPlayers();	
+	} else if(nbreparticipant === 5){
+	fivePlayers();	
+	} else if(nbreparticipant === 6){
+	sixPlayers();	
+	} else if(nbreparticipant === 7){
+	sevenPlayers();	
+	} else if(nbreparticipant === 8){
+	eightPlayers();	
+	} else if(nbreparticipant === 9){
+	ninePlayers();	
+	} else if(nbreparticipant === 10){
+	tenPlayers();	
+	} else if(nbreparticipant === 11){
+	elevenPlayers();	
 	} else{
-	TwelvePlayers();	
+	twelvePlayers();	
 	}	
 	return true;
 	}

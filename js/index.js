@@ -1,28 +1,28 @@
 ﻿function onChangeListbox(){
 	var participantselectiondiv = document.getElementById('participantselection'), selectedValue = document.getElementById('participantchoice'), choice = selectedValue.selectedIndex, seekvalue = parseInt(selectedValue.options[choice].value), nbreloop = 1;
 	while(nbreloop <= seekvalue){
-		if(document.body.contains(document.getElementById("textdivparticipant" + nbreloop)) == false){
+		if(document.body.contains(document.getElementById("textdivparticipant" + nbreloop)) === false){
 		var textdiv = document.createElement("div");
 		textdiv.id = "textdivparticipant" + nbreloop, textdiv.className = "textdivgroup";
 		participantselectiondiv.appendChild(textdiv);
 		}
 		var textdivid = document.getElementById("textdivparticipant" + nbreloop), textdividtest = document.body.contains(document.getElementById("textdivparticipant" + nbreloop)), testfield = document.body.contains(document.getElementById("perso" + nbreloop));
-		if(testfield == true && textdividtest == true){
+		if(testfield === true && textdividtest === true){
 			textdivid.removeChild(document.getElementById("canvas" + nbreloop));
 			textdivid.removeChild(document.getElementById("buttonfiledialog" + nbreloop));
 			textdivid.removeChild(document.getElementById("separator" + nbreloop));
 			textdivid.removeChild(document.getElementById("paragraphfiledialog" + nbreloop));
 			textdivid.removeChild(document.getElementById("perso" + nbreloop));
 			textdivid.removeChild(document.getElementById("perso" + nbreloop + "paragraph"));
-			if(document.body.contains(document.getElementById("space" + nbreloop))){
+			if(document.body.contains(document.getElementById("space" + nbreloop)) === true){
 			participantselectiondiv.removeChild(document.getElementById("space" + nbreloop));
 			}
 			participantselectiondiv.removeChild(document.getElementById("textdivparticipant" + nbreloop));
 		}
-		if(document.body.contains(document.getElementById("submitbutton")) == true){
+		if(document.body.contains(document.getElementById("submitbutton")) === true){
 			participantselectiondiv.removeChild(document.getElementById("submitbutton"));
 		}
-		if(document.body.contains(document.getElementById("textdivparticipant" + nbreloop)) == false){
+		if(document.body.contains(document.getElementById("textdivparticipant" + nbreloop)) === false){
 		var textdiv2 = document.createElement("div");
 		textdiv2.id = "textdivparticipant" + nbreloop, textdiv2.className = "textdivgroup";
 		participantselectiondiv.appendChild(textdiv2);		
@@ -48,14 +48,14 @@
 			while((nbreloop + nbreloop2) <= 12){
 		if(document.body.contains(document.getElementById("textdivparticipant" + (nbreloop + nbreloop2))) == true){
 		var textdividtest2 = document.getElementById("textdivparticipant" + (nbreloop + nbreloop2)), testfieldnext = document.body.contains(document.getElementById("perso" + (nbreloop + nbreloop2)));	
-		if(testfieldnext == true){
+		if(testfieldnext === true){
 			textdividtest2.removeChild(document.getElementById("canvas" + (nbreloop + nbreloop2)));
 			textdividtest2.removeChild(document.getElementById("buttonfiledialog" + (nbreloop + nbreloop2)));
 			textdividtest2.removeChild(document.getElementById("separator" + (nbreloop + nbreloop2)));
 			textdividtest2.removeChild(document.getElementById("paragraphfiledialog" + (nbreloop + nbreloop2)));
 			textdividtest2.removeChild(document.getElementById("perso" + (nbreloop + nbreloop2)));
 			textdividtest2.removeChild(document.getElementById("perso" + (nbreloop + nbreloop2) + "paragraph"));
-			if(document.body.contains(document.getElementById("space" + (nbreloop + nbreloop2)))){
+			if(document.body.contains(document.getElementById("space" + (nbreloop + nbreloop2))) === true){
 			participantselectiondiv.removeChild(document.getElementById("space" + (nbreloop + nbreloop2 )));
 			}
 			participantselectiondiv.removeChild(document.getElementById("textdivparticipant" + (nbreloop + nbreloop2)));

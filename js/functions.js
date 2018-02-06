@@ -6,9 +6,9 @@ var nbrebuttonsource = 0;
 function FileDialog(buttonobject)  
 {
 	var nbreloopbt = 1;
-	while(nbreloopbt != nbrebuttonsource)
+	while(nbreloopbt !== nbrebuttonsource)
 	{
-		if(buttonobject == "buttonfiledialog" + nbreloopbt){
+		if(buttonobject === "buttonfiledialog" + nbreloopbt){
 			nbrebuttonsource = nbreloopbt;
 			nbreloopbt--;
 		}
@@ -36,7 +36,7 @@ function displayImg(imgSrc)
 }
 //                                                                                       Permet de dérouler le scénario pour trois joueurs
 //                                                                                                              ↓↓↓
-function ThreePlayers()
+function threePlayers()
 {
 	var divthreeplayers = document.createElement("div");
 	var pthreeplayers = document.createElement("p");
@@ -48,7 +48,7 @@ function ThreePlayers()
 }
 //                                                                                       Permet de dérouler le scénario pour quatre joueurs
 //                                                                                                              ↓↓↓
-function FourPlayers()
+function fourPlayers()
 {
 	var divfourplayers = document.createElement("div");
 	var pfourplayers = document.createElement("p");
@@ -60,7 +60,7 @@ function FourPlayers()
 }
 //                                                                                       Permet de dérouler le scénario pour cinq joueurs
 //                                                                                                              ↓↓↓
-function FivePlayers()
+function fivePlayers()
 {
 	var divfiveplayers = document.createElement("div");
 	var pfiveplayers = document.createElement("p");
@@ -72,7 +72,7 @@ function FivePlayers()
 }
 //                                                                                       Permet de dérouler le scénario pour six joueurs
 //                                                                                                              ↓↓↓
-function SixPlayers()
+function sixPlayers()
 {
 	var divsixplayers = document.createElement("div");
 	var psixplayers = document.createElement("p");
@@ -84,7 +84,7 @@ function SixPlayers()
 }
 //                                                                                       Permet de dérouler le scénario pour sept joueurs
 //                                                                                                              ↓↓↓
-function SevenPlayers()
+function sevenPlayers()
 {
 	var divsevenplayers = document.createElement("div");
 	var psevenplayers = document.createElement("p");
@@ -96,7 +96,7 @@ function SevenPlayers()
 }
 //                                                                                       Permet de dérouler le scénario pour huit joueurs
 //                                                                                                              ↓↓↓
-function EightPlayers()
+function eightPlayers()
 {
 	var diveightplayers = document.createElement("div");
 	var peightplayers = document.createElement("p");
@@ -108,7 +108,7 @@ function EightPlayers()
 }
 //                                                                                       Permet de dérouler le scénario pour neuf joueurs
 //                                                                                                              ↓↓↓
-function NinePlayers()
+function ninePlayers()
 {
 	var divnineplayers = document.createElement("div");
 	var pnineplayers = document.createElement("p");
@@ -120,7 +120,7 @@ function NinePlayers()
 }
 //                                                                                       Permet de dérouler le scénario pour dix joueurs
 //                                                                                                              ↓↓↓
-function TenPlayers()
+function tenPlayers()
 {
 	var divtenplayers = document.createElement("div");
 	var ptenplayers = document.createElement("p");
@@ -132,7 +132,7 @@ function TenPlayers()
 }
 //                                                                                       Permet de dérouler le scénario pour onze joueurs
 //                                                                                                              ↓↓↓
-function ElevenPlayers()
+function elevenPlayers()
 {
 	var divelevenplayers = document.createElement("div");
 	var pelevenplayers = document.createElement("p");
@@ -144,7 +144,7 @@ function ElevenPlayers()
 }
 //                                                                                       Permet de dérouler le scénario pour douze joueurs
 //                                                                                                              ↓↓↓
-function TwelvePlayers()
+function twelvePlayers()
 {
 	var divtwelveplayers = document.createElement("div");
 	var ptwelveplayers = document.createElement("p");
