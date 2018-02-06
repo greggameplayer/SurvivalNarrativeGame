@@ -35,7 +35,6 @@ footer {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: s;
   flex-basis: 50%;
   position: absolute;
   top: 110px;
@@ -43,19 +42,55 @@ footer {
   width: 400px;
 }
 #textdivparticipant1{
-  border-color: red;
+  box-shadow: 0px 0px 10px red;
 }
 .textdivgroup {
   padding-right: 70px;
-  border-style: solid;
+  box-shadow: 0px 0px 10px black;
   border-radius: 5px;
+  margin-right: 10px;
 }
 .buttonfiledialoggroup{
   height: 25px;
   width: 100px;
+  position: relative;
+  top: -38px;
+  left: +130px;
+}
+.canvasgroup
+{
+  position:relative;
+  left: +200px;
+  top: -10px;
 }
 #submitbutton
 {
   height: 25px;
   width: 100px; 
+}
+.spacegroup
+{
+  height: 15px;
+}
+.separatorgroup
+{
+  position: relative;
+  left: +25px;
+}
+.persoparagraphgroup
+{
+  position: relative;
+  left: +25px;
+}
+.persogroup
+{
+  position: relative;
+  left: +25px;
+  top: -5px;
+  width: 298.4px;
+}
+.paragraphfiledialoggroup
+{
+  position: relative;
+  left: +25px;
 }
