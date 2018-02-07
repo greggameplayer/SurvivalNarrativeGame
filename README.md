@@ -6,5 +6,16 @@
 
 
 
+## Français :
 Ceci est un jeu de survie narratif
-dans lequel vous êtes invité à survivre avec une bande d'amis du nombre de votre choix (de 2 à 11 amis) dans une maison hanté
+dans lequel vous êtes invité à survivre avec une bande d'amis du nombre de votre choix (de 2 à 11 amis) dans une maison hanté.
+<br>
+<br>
+Ce projet a été créé par greggameplayer (alias Grégoire), urbexe (alias Matthias) et Moonlight479 (alias Arthur).
+
+## English :
+
+This is a narrative survival game in that game you're invited to survive with a group of friends of the number of your choice (at 2 to 11 friends) in a haunted house.
+<br>
+<br>
+This project was created by greggameplayer (alias Grégoire), by urbexe (alias Matthias) and by Moonlight479(alias Arthur).
