@@ -43,6 +43,7 @@ function threePlayers()
 	pthreeplayers.id =  "pthreeplayers";
 	pthreeplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné <br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
 	divthreeplayers.id = "threeplayers";
+	divthreeplayers.className = "divplayersgroup";
 	document.body.appendChild(divthreeplayers);
 	divthreeplayers.appendChild(pthreeplayers);
 }
@@ -55,6 +56,7 @@ function fourPlayers()
 	pfourplayers.id =  "pfourplayers";
 	pfourplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
 	divfourplayers.id = "fourplayers";
+	divfourplayers.className = "divplayersgroup";
 	document.body.appendChild(divfourplayers);
 	divfourplayers.appendChild(pfourplayers);
 }
@@ -67,6 +69,7 @@ function fivePlayers()
 	pfiveplayers.id =  "pfiveplayers";
 	pfiveplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
 	divfiveplayers.id = "fiveplayers";
+	divfiveplayers.className = "divplayersgroup";
 	document.body.appendChild(divfiveplayers);
 	divfiveplayers.appendChild(pfiveplayers);
 }
@@ -79,6 +82,7 @@ function sixPlayers()
 	psixplayers.id =  "psixplayers";
 	psixplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
 	divsixplayers.id = "sixplayers";
+	divsixplayers.className = "divplayersgroup";
 	document.body.appendChild(divsixplayers);
 	divsixplayers.appendChild(psixplayers);
 }
@@ -91,6 +95,7 @@ function sevenPlayers()
 	psevenplayers.id =  "psevenplayers";
 	psevenplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
 	divsevenplayers.id = "sevenplayers";
+	divsevenplayers.className = "divplayersgroup";
 	document.body.appendChild(divsevenplayers);
 	divsevenplayers.appendChild(psevenplayers);
 }
@@ -103,6 +108,7 @@ function eightPlayers()
 	peightplayers.id =  "peightplayers";
 	peightplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
 	diveightplayers.id = "eightplayers";
+	diveightplayers.className = "divplayersgroup";
 	document.body.appendChild(diveightplayers);
 	diveightplayers.appendChild(peightplayers);
 }
@@ -115,6 +121,7 @@ function ninePlayers()
 	pnineplayers.id =  "pnineplayers";
 	pnineplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
 	divnineplayers.id = "nineplayers";
+	divnineplayers.className = "divplayersgroup";
 	document.body.appendChild(divnineplayers);
 	divnineplayers.appendChild(pnineplayers);
 }
@@ -127,6 +134,7 @@ function tenPlayers()
 	ptenplayers.id =  "ptenplayers";
 	ptenplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
 	divtenplayers.id = "tenplayers";
+	divtenplayers.className = "divplayersgroup";
 	document.body.appendChild(divtenplayers);
 	divtenplayers.appendChild(ptenplayers);
 }
@@ -139,6 +147,7 @@ function elevenPlayers()
 	pelevenplayers.id =  "pelevenplayers";
 	pelevenplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
 	divelevenplayers.id = "elevenplayers";
+	divelevenplayers.className = "divplayersgroup";
 	document.body.appendChild(divelevenplayers);
 	divelevenplayers.appendChild(pelevenplayers);
 }
@@ -151,6 +160,7 @@ function twelvePlayers()
 	ptwelveplayers.id =  "ptwelveplayers";
 	ptwelveplayers.innerHTML = "Une bande d'amis ayant entendu parlé d'une maison abandonné<br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
 	divtwelveplayers.id = "twelveplayers";
+	divtwelveplayers.className = "divplayersgroup";
 	document.body.appendChild(divtwelveplayers);
 	divthreeplayers.appendChild(ptwelveplayers);
 }
