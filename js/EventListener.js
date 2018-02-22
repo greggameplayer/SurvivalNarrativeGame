@@ -1,4 +1,6 @@
 var listbox;// initialisation de la variable listbox servant à stocker l'élément #participantchoice
+var players = [];
+
 //                                          Fonction effectué au chargement permettant de créer toutes les options de choix de la listbox et de rediriger vers un événement détectant
 //                                                                       					un changement de selection dans la listbox 
 //                                                                                                              ↓↓↓
@@ -86,6 +88,11 @@ context.clearRect(0, 0, context.width, context.height);
 
 function OnSubmitbuttonClick(nbreparticipant){
 	var nbreloopsubmitbutton = 1;
+	var nbreloopplayers = 1;
+	while(nbreloopplayers <= nbreparticipant){
+		players[nbreloopplayers - 1] = document.getElementById("perso" + nbreloopplayers).value;
+		nbreloopplayers++;
+	}
 	while(nbreloopsubmitbutton <= 12){
 	if(document.body.contains(document.getElementById("perso" + nbreloopsubmitbutton)) == true){
 	if(document.getElementById("perso" + nbreloopsubmitbutton).value == ""){
@@ -105,29 +112,9 @@ function OnSubmitbuttonClick(nbreparticipant){
 	document.body.removeChild(document.getElementById("participantselection"));
 	document.body.removeChild(listbox);
 	document.body.removeChild(document.getElementById("participantchoiceparagraph"));
-	if(parseInt(nbreparticipant) === 3){
-	threePlayers();	
-	} else if(nbreparticipant === 4){
-	fourPlayers();	
-	} else if(nbreparticipant === 5){
-	fivePlayers();	
-	} else if(nbreparticipant === 6){
-	sixPlayers();	
-	} else if(nbreparticipant === 7){
-	sevenPlayers();	
-	} else if(nbreparticipant === 8){
-	eightPlayers();	
-	} else if(nbreparticipant === 9){
-	ninePlayers();	
-	} else if(nbreparticipant === 10){
-	tenPlayers();	
-	} else if(nbreparticipant === 11){
-	elevenPlayers();	
-	} else{
-	twelvePlayers();	
-	}	
+	playerScenar();
 	return true;
 	}
-	}
 
+}
 }

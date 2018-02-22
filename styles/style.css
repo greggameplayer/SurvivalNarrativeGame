@@ -98,8 +98,9 @@ footer {
 {
 text-align: center;
 position:absolute;
-top: 250px;
-left: 450px;
+height: 155px;
+top: calc(50% - 77.5px);
+left: calc(50% - 162.5px);
 border-width: 3px;
 border-color: black;
 border-style: solid;
