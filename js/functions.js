@@ -58,6 +58,9 @@ function playerScenar()
 	nbreplayers = players.length;
 	var divplayers = document.createElement("div");
 	var pplayers = document.createElement("p");
+  var backgroundplayers = document.createElement("img");
+	backgroundplayers.src = "fonds/arrivee.jpg";
+	backgroundplayers.id = "backgroundplayers";
 	pplayers.id =  "pplayers";
 	dtext = "Une bande d'amis ayant entendu parlé d'une maison abandonné <br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
 	lengthtext =  dtext.length;
@@ -66,4 +69,5 @@ function playerScenar()
 	divplayers.className = "divplayersgroup";
 	document.body.appendChild(divplayers);
 	divplayers.appendChild(pplayers);
+  document.body.appendChild(backgroundplayers);
 }

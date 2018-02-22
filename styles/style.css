@@ -107,3 +107,12 @@ border-style: solid;
 border-radius: 30px;
 width: 325px;
 }
+#backgroundplayers
+{
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
