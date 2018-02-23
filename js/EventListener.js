@@ -118,3 +118,8 @@ function OnSubmitbuttonClick(nbreparticipant){
 
 }
 }
+
+function onChangeDivplayers()
+{
+	boxheight.innerHTML = document.getElementById("divplayers").style.height;
+}
