@@ -70,4 +70,24 @@ function playerScenar()
 	document.body.appendChild(divplayers);
 	divplayers.appendChild(pplayers);
   document.body.appendChild(backgroundplayers);
+  
+  
+  var divpack1 = document.createElement("div");
+  divpack1.id = "divpack1";
+  document.body.appendChild(divpack1);
+  
+  var divpack2 = document.createElement("div");
+  divpack2.id = "divpack2";
+  document.body.appendChild(divpack2);
+  
+  var imgpack1 = document.createElement("img");
+  imgpack1.id = "imgpack1";
+  divpack1.appendChild(imgpack1);
+  
+  var imgpack2 = document.createElement("img");
+  imgpack2.id = "imgpack2";
+  divpack2.appendChild(imgpack2);
+  
+  divpack1.addEventListener("click", onClickDivpack1);
+  divpack2.addEventListener("click", onClickDivpack2);
 }
