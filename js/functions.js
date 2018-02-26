@@ -6,6 +6,10 @@ var valuetext;
 var dtext;
 var intervaldiv;
 var nbreplayers;
+var heightboxvar;
+var substrtext3;
+var substrtext2;
+var substrtext1;
 //                                                                  Permet d'ouvrir la fenêtre de dialogue dans le but de selectionner une image de 64x64px
 //                                                          et créer un événement onChange pour détécter la fermeture et executer la fonction OnOpenFileDialogChange
 //                                                                                                              ↓↓↓
@@ -44,9 +48,17 @@ function displayImg(imgSrc)
 //																												↓↓↓
 function TextDisplay()
 {
-	if(lengthtext != counter){
+	substrtext3 = dtext.substring(counter - 3, counter);
+	substrtext2 = dtext.substring(counter - 2, counter);
+	substrtext1 = dtext.substring(counter - 1, counter);
+	if(lengthtext !== counter){
+	if(substrtext3 !== "<br" && substrtext2 !== "<b" && substrtext1 !== "<"){
 	valuetext = dtext.substr(0, counter);
 	pplayers.innerHTML = valuetext;
+	
+	heightboxvar = $("#divplayers").height();
+	document.getElementById("divplayers").style.top = "calc(50% - " + (heightboxvar / 2)+ "px)";
+	}
 	}else{
 	counter = 0;
 	clearInterval(intervaldiv);
