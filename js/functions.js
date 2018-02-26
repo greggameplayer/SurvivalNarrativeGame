@@ -6,6 +6,10 @@ var valuetext;
 var dtext;
 var intervaldiv;
 var nbreplayers;
+var heightboxvar;
+var substrtext3;
+var substrtext2;
+var substrtext1;
 //                                                                  Permet d'ouvrir la fenêtre de dialogue dans le but de selectionner une image de 64x64px
 //                                                          et créer un événement onChange pour détécter la fermeture et executer la fonction OnOpenFileDialogChange
 //                                                                                                              ↓↓↓
@@ -44,9 +48,17 @@ function displayImg(imgSrc)
 //																												↓↓↓
 function TextDisplay()
 {
+	substrtext3 = dtext.substring(counter - 3, counter);
+	substrtext2 = dtext.substring(counter - 2, counter);
+	substrtext1 = dtext.substring(counter - 1, counter);
 	if(lengthtext != counter){
+	if(substrtext3 != "<br" && substrtext2 != "<b" && substrtext1 != "<"){
 	valuetext = dtext.substr(0, counter);
 	pplayers.innerHTML = valuetext;
+	
+	heightboxvar = $('#divplayers').height();
+	document.getElementById("divplayers").style.top = "calc(50% - " + (heightboxvar / 2)+ "px)";
+	}
 	}else{
 	counter = 0;
 	clearInterval(intervaldiv);
@@ -58,11 +70,9 @@ function playerScenar()
 	nbreplayers = players.length;
 	var divplayers = document.createElement("div");
 	var pplayers = document.createElement("p");
-	var boxheight = document.createElement("p");
   var backgroundplayers = document.createElement("img");
 	backgroundplayers.src = "fonds/arrivee.jpg";
 	backgroundplayers.id = "backgroundplayers";
-	boxheight.id = "boxheight";
 	pplayers.id =  "pplayers";
 	dtext = "Une bande d'amis ayant entendu parlé d'une maison abandonné <br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
 	lengthtext =  dtext.length;
@@ -70,8 +80,6 @@ function playerScenar()
 	divplayers.id = "divplayers";
 	divplayers.className = "divplayersgroup";
 	document.body.appendChild(divplayers);
-	document.body.appendChild(boxheight);
 	divplayers.appendChild(pplayers);
   document.body.appendChild(backgroundplayers);
-  divplayers.addEventListener("change", onChangeDivplayers);
 }
