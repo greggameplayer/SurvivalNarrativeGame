@@ -94,18 +94,19 @@ footer {
   position: relative;
   left: +25px;
 }
-.divplayersgroup
+#divplayers
 {
 text-align: center;
+color: white;
 position:absolute;
-height: 155px;
 top: calc(50% - 77.5px);
-left: calc(50% - 162.5px);
+left: calc(50% - 200px);
 border-width: 3px;
-border-color: black;
+border-color: white;
 border-style: solid;
 border-radius: 30px;
-width: 325px;
+width: 400px;
+  font-size: 1.5rem;
 }
 #backgroundplayers
 {
