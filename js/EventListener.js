@@ -118,3 +118,13 @@ function OnSubmitbuttonClick(nbreparticipant){
 
 }
 }
+
+function onClickDivpack1()
+{
+	
+}
+
+function onClickDivpack2()
+(
+
+)
