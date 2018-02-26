@@ -51,12 +51,12 @@ function TextDisplay()
 	substrtext3 = dtext.substring(counter - 3, counter);
 	substrtext2 = dtext.substring(counter - 2, counter);
 	substrtext1 = dtext.substring(counter - 1, counter);
-	if(lengthtext != counter){
-	if(substrtext3 != "<br" && substrtext2 != "<b" && substrtext1 != "<"){
+	if(lengthtext !== counter){
+	if(substrtext3 !== "<br" && substrtext2 !== "<b" && substrtext1 !== "<"){
 	valuetext = dtext.substr(0, counter);
 	pplayers.innerHTML = valuetext;
 	
-	heightboxvar = $('#divplayers').height();
+	heightboxvar = $("#divplayers").height();
 	document.getElementById("divplayers").style.top = "calc(50% - " + (heightboxvar / 2)+ "px)";
 	}
 	}else{
