@@ -74,7 +74,9 @@ function playerScenar()
 	backgroundplayers.src = "fonds/arrivee.jpg";
 	backgroundplayers.id = "backgroundplayers";
 	pplayers.id =  "pplayers";
-	dtext = "Une bande d'amis ayant entendu parlé d'une maison abandonné <br>décide de s'y aventurer afin de vérifier si elle est aussi <br>effrayante que l'on ne le dit.....<br>Mais ils ne s'attendaient pas à vivre cela... ";
+	var randomplayer = Math.floor(Math.random()* nbreplayers);
+	dtext = "Un de vos amis a récemment entendu parler d'une maison abandonnée.<br>il vous a convaincu, ainsi que plusieurs autres personnes d'aller l'explorer.<br>Parti en éclaireur, votre ami " + players[randomplayer] +" vous a donné rendez-vous devant le lieu en question...";
+    	var page2 = " Deux heures avant le rendez-vous " + players[randomplayer] +" vous envoie par SMS l'adresse de la maison hantée.<br>Vous attrapez à la volée votre équipement et vous vous engouffrez dans votre voitures. "	// proposer les deux packs différents.
 	lengthtext =  dtext.length;
 	intervaldiv = setInterval(TextDisplay, 100);
 	divplayers.id = "divplayers";
@@ -82,4 +84,16 @@ function playerScenar()
 	document.body.appendChild(divplayers);
 	divplayers.appendChild(pplayers);
   document.body.appendChild(backgroundplayers);
+}
+function entreetext1()
+{
+	var inputGPS = document.createElement("input");
+	inputGPS.id = "inputGPS";
+	document.body.appendChild(inputGPS);
+	if(document.getElementById("inputGPS").value == ""){
+		
+	}
+	
+	
+	
 }
