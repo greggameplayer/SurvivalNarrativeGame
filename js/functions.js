@@ -1,10 +1,13 @@
 var filedialog = []; // tableau contenant les images valide
 var nbrebuttonsource = 0;
-var counter = 1;
+var counter = 0;
+var countersuppr = 1;
 var lengthtext = 0;
 var valuetext;
 var dtext;
 var intervaldiv;
+var intervalsuppr;
+var setTimeoutSuppr;
 var nbreplayers;
 var heightboxvar;
 var substrtext3;
@@ -60,10 +63,36 @@ function TextDisplay()
 	document.getElementById("divplayers").style.top = "calc(50% - " + (heightboxvar / 2)+ "px)";
 	}
 	}else{
+	valuetext = dtext.substr(0, counter);
+	pplayers.innerHTML = valuetext;
 	counter = 0;
 	clearInterval(intervaldiv);
+	setTimeoutSuppr = setTimeout(function(){
+	 countersuppr = lengthtext;
+	 intervalsuppr = setInterval(TextSuppr, 50);	
+	}, 3000);
 	}
 	counter++;
+}
+function TextSuppr(){
+	substrtext3 = dtext.substring(countersuppr - 3, countersuppr);
+	substrtext2 = dtext.substring(countersuppr - 2, countersuppr);
+	substrtext1 = dtext.substring(countersuppr - 1, countersuppr);
+	if(countersuppr !== 0){
+	if(substrtext3 !== "<br" && substrtext2 !== "<b" && substrtext1 !== "<"){
+	valuetext = dtext.substr(0, countersuppr);
+	pplayers.innerHTML = valuetext;
+	
+	heightboxvar = $("#divplayers").height();
+	document.getElementById("divplayers").style.top = "calc(50% - " + (heightboxvar / 2)+ "px)";
+	}
+	}else{
+	valuetext = dtext.substr(0, countersuppr);
+	pplayers.innerHTML = valuetext;
+	clearInterval(intervalsuppr);
+	clearTimeout(setTimeoutSuppr);
+	}
+	countersuppr--;	
 }	
 function playerScenar()
 {
