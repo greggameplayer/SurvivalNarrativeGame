@@ -1,5 +1,6 @@
 var listbox;// initialisation de la variable listbox servant à stocker l'élément #participantchoice
 var players = [];
+var packchose;
 
 //                                          Fonction effectué au chargement permettant de créer toutes les options de choix de la listbox et de rediriger vers un événement détectant
 //                                                                       					un changement de selection dans la listbox 
@@ -117,4 +118,23 @@ function OnSubmitbuttonClick(nbreparticipant){
 	}
 
 }
+}
+function onClickDivpack1()
+{
+	document.getElementById("divpack1").style.borderColor = "green";
+	packchose = 1;
+}
+
+function onClickDivpack2()
+{
+	document.getElementById("divpack2").style.borderColor = "green";
+	packchose = 2;
+}
+function onClickSubmitpackbutton()
+{
+	if(packchose == 0 || packchose == null){
+		window.alert("Vous n'avez pas choisi de pack");
+	}else{
+	page4();	
+	}
 }
