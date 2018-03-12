@@ -69,14 +69,17 @@ function TextDisplay()
 	pplayers.innerHTML = valuetext;
 	counter = 0;
 	clearInterval(intervaldiv);
-	if(page != 3){
+	if(page != 3 && page != 5){
 	setTimeoutSuppr = setTimeout(function(){
 	 countersuppr = lengthtext;
 	 intervalsuppr = setInterval(TextSuppr, 50);	
 	}, 3000);
-	}else{
+	}else if(page == 3){
 	page++;
 	packChoice();
+	}else{
+	page++;
+	GPS();
 	}
 	}
 	counter++;
@@ -126,7 +129,7 @@ function playerScenar()
 }
 function page2()
 {
-	dtext = " Deux heures avant le rendez-vous " + players[randomplayer] +" vous envoie par SMS l'adresse de la maison hantée.<br>Vous attrapez à la volée l'équipement de votre choix";
+	dtext = " Deux heures avant le rendez-vous " + players[randomplayer] +" vous envoie par SMS l'adresse de la maison hantée.<br>Voici donc l'adresse qu'il vous a envoyé : Paris 13 rue de potier.<br>Vous attrapez à la volée l'équipement de votre choix";
 	lengthtext =  dtext.length;
 	intervaldiv = setInterval(TextDisplay, 100);
 }
@@ -161,17 +164,17 @@ function packChoice()
 
 function page4()
 {
-	
+	dtext = " Vous entrez donc dans la voiture avec le pack d'équipement n°" + packchose + " puis vous devez entrer l'adresse communiqué précedemment par " + players[randomplayer] + ", dans le GPS";
+	lengthtext =  dtext.length;
+	intervaldiv = setInterval(TextDisplay, 100);	
 }
-function entreetext1()
+function GPS()
 {
 	var inputGPS = document.createElement("input");
 	inputGPS.id = "inputGPS";
 	document.body.appendChild(inputGPS);
-	if(document.getElementById("inputGPS").value == ""){
-		
-	}
-	
-	
-	
+	var GPSButton = document.createElement("button");
+	GPSButton.id = "GPSButton";
+	document.body.appendChild(GPSButton);
+	GPSButton.addEventListener("click", onClickGPSButton);
 }
