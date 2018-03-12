@@ -138,3 +138,13 @@ function onClickSubmitpackbutton()
 	page4();	
 	}
 }
+function onClickGPSButton()
+{
+	if(document.getElementById("inputGPS").value == "Paris 13 rue de potier"){
+	page6();	
+	}else{
+	window.alert("Vous n'avez pas rentré la bonne adresse, s'il vous plaît reentrez l'adresse dans le GPS");	
+	}
+	
+}
+
