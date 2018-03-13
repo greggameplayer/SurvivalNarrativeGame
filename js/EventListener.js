@@ -119,15 +119,17 @@ function OnSubmitbuttonClick(nbreparticipant){
 
 }
 }
-function onClickDivpack1()
+function onClickImgpack1()
 {
-	document.getElementById("divpack1").style.borderColor = "green";
+	document.getElementById("imgpack1").style.borderColor = "green";
+	document.getElementById("imgpack2").style.borderColor = "white";
 	packchose = 1;
 }
 
-function onClickDivpack2()
+function onClickImgpack2()
 {
-	document.getElementById("divpack2").style.borderColor = "green";
+	document.getElementById("imgpack2").style.borderColor = "green";
+	document.getElementById("imgpack1").style.borderColor = "white";
 	packchose = 2;
 }
 function onClickSubmitpackbutton()
@@ -135,12 +137,15 @@ function onClickSubmitpackbutton()
 	if(packchose == 0 || packchose == null){
 		window.alert("Vous n'avez pas choisi de pack");
 	}else{
+	document.body.removeChild(document.getElementById("imgpack1"));
+	document.body.removeChild(document.getElementById("imgpack2"));
+	document.body.removeChild(document.getElementById("submitpackbutton"));
 	page4();	
 	}
 }
 function onClickGPSButton()
 {
-	if(document.getElementById("inputGPS").value == "Paris 13 rue de potier"){
+	if(document.getElementById("inputGPS").value.toLowerCase == "paris 13 rue de potier"){
 	page6();	
 	}else{
 	window.alert("Vous n'avez pas rentré la bonne adresse, s'il vous plaît reentrez l'adresse dans le GPS");	

@@ -117,3 +117,30 @@ width: 400px;
   height: 100%;
   width: 100%;
 }
+#imgpack1
+{
+  width: 10%;
+  position: absolute;
+  top: initial;
+  left: 25%;
+  border: 4px solid;
+  border-color: white;
+}
+#imgpack2
+{
+  width: 10%;
+  position: absolute;
+  top: initial;
+  left: 65%;
+  border: 4px solid;
+  border-color: white;
+}
+#submitpackbutton
+{
+  position:absolute;
+  width: 150px;
+  font-size: 1.1rem;
+  left: calc(50% - 75px);
+  top: initial;
+  color: grey;
+}

@@ -15,6 +15,7 @@ var substrtext2;
 var substrtext1;
 var page = 2;
 var randomplayer;
+var realtimetopbox;
 //                                                                  Permet d'ouvrir la fenêtre de dialogue dans le but de selectionner une image de 64x64px
 //                                                          et créer un événement onChange pour détécter la fermeture et executer la fonction OnOpenFileDialogChange
 //                                                                                                              ↓↓↓
@@ -69,13 +70,14 @@ function TextDisplay()
 	pplayers.innerHTML = valuetext;
 	counter = 0;
 	clearInterval(intervaldiv);
-	if(page != 3 && page != 5){
+	if(page != 3 && page != 4){
 	setTimeoutSuppr = setTimeout(function(){
 	 countersuppr = lengthtext;
 	 intervalsuppr = setInterval(TextSuppr, 50);	
 	}, 3000);
 	}else if(page == 3){
 	page++;
+	realtimetopbox = $("#divplayers").offset().top;
 	packChoice();
 	}else{
 	page++;
@@ -135,30 +137,28 @@ function page2()
 }
 function packChoice()
 {
-  var divpack1 = document.createElement("div");
-  divpack1.id = "divpack1";
-  document.body.appendChild(divpack1);
-  
-  var divpack2 = document.createElement("div");
-  divpack2.id = "divpack2";
-  document.body.appendChild(divpack2);
   
   var submitpackbutton = document.createElement("button");
   submitpackbutton.id = "submitpackbutton";
   document.body.appendChild(submitpackbutton);
+  submitpackbutton.innerHTML = "Valider";
   
   var imgpack1 = document.createElement("img");
   imgpack1.id = "imgpack1";
-  imgpack1.src = "";
-  divpack1.appendChild(imgpack1);
+  imgpack1.src = "items/pack1.png";
+  document.body.appendChild(imgpack1);
   
   var imgpack2 = document.createElement("img");
   imgpack2.id = "imgpack2";
-  imgpack2.src = "";
-  divpack2.appendChild(imgpack2);
+  imgpack2.src = "items/pack2.png";
+  document.body.appendChild(imgpack2);
   
-  divpack1.addEventListener("click", onClickDivpack1);
-  divpack2.addEventListener("click", onClickDivpack2);
+  document.getElementById("imgpack1").style.top = "calc(" + realtimetopbox + "px" + " + 30%)"; 
+  document.getElementById("imgpack2").style.top = "calc(" + realtimetopbox + "px" + " + 30%)";
+  document.getElementById("submitpackbutton").style.top = "calc(" + realtimetopbox + "px" + " + 53%)";
+  
+  imgpack1.addEventListener("click", onClickImgpack1);
+  imgpack2.addEventListener("click", onClickImgpack2);
   submitpackbutton.addEventListener("click", onClickSubmitpackbutton);
 }
 
