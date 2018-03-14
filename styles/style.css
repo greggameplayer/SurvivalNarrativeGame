@@ -144,3 +144,39 @@ width: 400px;
   top: initial;
   color: grey;
 }
+#inputGPS
+{
+  width: 15%;
+  position: absolute;
+  top: initial;
+  left: calc(50% - 7.5%);
+  border-radius: 5px;
+  
+}
+#GPSButton
+{
+  width: 15%;
+  position: absolute;
+  top: initial;
+  left: calc(50% - 7.5%);
+  color: grey;
+
+}
+#inputDirection
+{
+  width: 15%;
+  position: absolute;
+  top: initial;
+  left: calc(50% - 7.5%);
+  border-radius: 5px;
+  
+}
+#DirectionButton
+{
+  width: 15%;
+  position: absolute;
+  top: initial;
+  left: calc(50% - 7.5%);
+  color: grey;
+
+}

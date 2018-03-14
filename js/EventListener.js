@@ -1,6 +1,7 @@
 var listbox;// initialisation de la variable listbox servant à stocker l'élément #participantchoice
 var players = [];
-var packchose;
+var packchosen;
+var directionchosen;
 
 //                                          Fonction effectué au chargement permettant de créer toutes les options de choix de la listbox et de rediriger vers un événement détectant
 //                                                                       					un changement de selection dans la listbox 
@@ -123,18 +124,18 @@ function onClickImgpack1()
 {
 	document.getElementById("imgpack1").style.borderColor = "green";
 	document.getElementById("imgpack2").style.borderColor = "white";
-	packchose = 1;
+	packchosen = 1;
 }
 
 function onClickImgpack2()
 {
 	document.getElementById("imgpack2").style.borderColor = "green";
 	document.getElementById("imgpack1").style.borderColor = "white";
-	packchose = 2;
+	packchosen = 2;
 }
 function onClickSubmitpackbutton()
 {
-	if(packchose == 0 || packchose == null){
+	if(packchosen == 0 || packchosen == null){
 		window.alert("Vous n'avez pas choisi de pack");
 	}else{
 	document.body.removeChild(document.getElementById("imgpack1"));
@@ -145,11 +146,35 @@ function onClickSubmitpackbutton()
 }
 function onClickGPSButton()
 {
-	if(document.getElementById("inputGPS").value.toLowerCase == "paris 13 rue de potier"){
+	if(document.getElementById("inputGPS").value.toLowerCase() == "paris 13 rue de potier"){
+	document.body.removeChild(document.getElementById("inputGPS"));
+	document.body.removeChild(document.getElementById("GPSButton"));
 	page6();	
 	}else{
 	window.alert("Vous n'avez pas rentré la bonne adresse, s'il vous plaît reentrez l'adresse dans le GPS");	
 	}
 	
+}
+
+function onClickDirectionButton()
+{
+	if(document.getElementById("inputDirection").value.toLowerCase() == "tout droit" || document.getElementById("inputDirection").value.toLowerCase() == "haut" || document.getElementById("inputDirection").value.toLowerCase() == "en haut"){
+		directionchosen = 1;
+		document.body.removeChild(document.getElementById("inputDirection"));
+		document.body.removeChild(document.getElementById("DirectionButton"));
+		takeDirection();
+	}else if(document.getElementById("inputDirection").value.toLowerCase() == "à droite" || document.getElementById("inputDirection").value.toLowerCase() == "droite" || document.getElementById("inputDirection").value.toLowerCase() == "a droite"){
+		directionchosen = 2;
+		document.body.removeChild(document.getElementById("inputDirection"));
+		document.body.removeChild(document.getElementById("DirectionButton"));		
+		takeDirection();
+	}else if(document.getElementById("inputDirection").value.toLowerCase() == "à gauche" || document.getElementById("inputDirection").value.toLowerCase() == "gauche" || document.getElementById("inputDirection").value.toLowerCase() == "a gauche"){
+		directionchosen = 3;
+		document.body.removeChild(document.getElementById("inputDirection"));
+		document.body.removeChild(document.getElementById("DirectionButton"));		
+		takeDirection();
+	}else{
+		window.alert("Vous n'avez pas rentrée une direction valide");
+	}
 }
 

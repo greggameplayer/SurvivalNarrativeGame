@@ -70,7 +70,7 @@ function TextDisplay()
 	pplayers.innerHTML = valuetext;
 	counter = 0;
 	clearInterval(intervaldiv);
-	if(page != 3 && page != 4){
+	if(page != 3 && page != 4 && page != 5){
 	setTimeoutSuppr = setTimeout(function(){
 	 countersuppr = lengthtext;
 	 intervalsuppr = setInterval(TextSuppr, 50);	
@@ -79,8 +79,13 @@ function TextDisplay()
 	page++;
 	realtimetopbox = $("#divplayers").offset().top;
 	packChoice();
+	}else if(page == 5){
+	page++;
+	realtimetopbox = $("#divplayers").offset().top;	
+	Direction();
 	}else{
 	page++;
+	realtimetopbox = $("#divplayers").offset().top;
 	GPS();
 	}
 	}
@@ -120,6 +125,9 @@ function playerScenar()
 	backgroundplayers.id = "backgroundplayers";
 	pplayers.id =  "pplayers";
 	randomplayer = Math.floor(Math.random()* nbreplayers);
+	while(randomplayer == 0){
+	randomplayer = Math.floor(Math.random()* nbreplayers);	
+	}
 	dtext = "Un de vos amis a récemment entendu parler d'une maison abandonnée.<br>il vous a convaincu, ainsi que plusieurs autres personnes d'aller l'explorer.<br>Parti en éclaireur, votre ami " + players[randomplayer] +" vous a donné rendez-vous devant le lieu en question...";
 	lengthtext =  dtext.length;
 	intervaldiv = setInterval(TextDisplay, 100);
@@ -164,7 +172,7 @@ function packChoice()
 
 function page4()
 {
-	dtext = " Vous entrez donc dans la voiture avec le pack d'équipement n°" + packchose + " puis vous devez entrer l'adresse communiqué précedemment par " + players[randomplayer] + ", dans le GPS";
+	dtext = " Vous entrez donc dans la voiture avec le pack d'équipement n°" + packchosen + " puis vous devez entrer l'adresse communiqué précedemment par " + players[randomplayer] + ", dans le GPS";
 	lengthtext =  dtext.length;
 	intervaldiv = setInterval(TextDisplay, 100);	
 }
@@ -176,5 +184,36 @@ function GPS()
 	var GPSButton = document.createElement("button");
 	GPSButton.id = "GPSButton";
 	document.body.appendChild(GPSButton);
+	GPSButton.innerHTML = "Valider";
+	document.getElementById("inputGPS").style.top = "calc(" + realtimetopbox + "px" + " + 30%)";
+	document.getElementById("GPSButton").style.top = "calc(" + realtimetopbox + "px" + " + 38%)";		
 	GPSButton.addEventListener("click", onClickGPSButton);
+}
+
+function page6()
+{
+	dtext = "Vous arrivez enfin avec vos amis sur le lieu dit mais en arrivant vous remarquez que " + players[randomplayer] + " est déjà rentré dans la maison hantée sans vous avoir attendu.<br>Vous allez donc dans la maison hantée dans le but de retrouver " + players[randomplayer] + ".<br>En rentrant vous remarquez que 3 chemin s'offre à vous.<br>En bon leader " + players[0] + " vous décidez pour le groupe.<br>Vous avez donc le choix d'aller soit tout droit, soit à droite ou soit à gauche.";
+	lengthtext =  dtext.length;
+	intervaldiv = setInterval(TextDisplay, 100);		
+	
+}
+function Direction()
+{
+	var inputDirection = document.createElement("input");
+	inputDirection.id = "inputDirection";
+	document.body.appendChild(inputDirection);
+	
+	var DirectionButton = document.createElement("button");
+	DirectionButton.id = "DirectionButton";
+	document.body.appendChild(DirectionButton);
+	DirectionButton.innerHTML = "Valider";
+
+	document.getElementById("inputDirection").style.top = "calc(" + realtimetopbox + "px" + " + 45%)";
+	document.getElementById("DirectionButton").style.top = "calc(" + realtimetopbox + "px" + " + 50%)";	
+	
+	DirectionButton.addEventListener("click", onClickDirectionButton);
+	
+}
+function takeDirection(){
+	
 }
