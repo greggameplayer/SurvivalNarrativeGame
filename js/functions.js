@@ -111,6 +111,9 @@ function TextSuppr(){
 	if(page == 2){
 		page++;
 		page2();
+	} else if(page == 6){
+		page++;
+		page7();
 	}
 	}
 	countersuppr--;	
@@ -215,5 +218,29 @@ function Direction()
 	
 }
 function takeDirection(){
+	var randomdeathpath = Math.floor(Math.random()* 3) + 1;
+	var direction;
+	if(directionchosen == 1){direction = "tout droit";}else if(directionchosen == 2){direction = "à droite";}else{direction = "à gauche";}
+	if(directionchosen == randomdeathpath){
+	dtext = "Vous avez donc décidez d'aller " + direction + ".<br>" + "Vous continuez votre chemin et vous vous aperçevez que vous êtes rentrés dans une piéce.<br>" + players[0] + " vous essayez d'ouvrir la porte par laquelle vous êtes entré mais rien à faire, elle s'est comme refermé à clé.<br>Ayant essayé de sortir par tout les moyens, vous finirez, vous et votre bandes d'amis mort de faim et de soif";
+	lengthtext =  dtext.length;
+	intervaldiv = setInterval(TextDisplay, 100);		
+	}else if(directionchosen == 1){
+	dtext = "Vous avez donc décidez d'aller " + direction ;
+	lengthtext =  dtext.length;
+	intervaldiv = setInterval(TextDisplay, 100);		
+	}else if(directionchosen == 2){
+	dtext = "Vous avez donc décidez d'aller " + direction ;
+	lengthtext =  dtext.length;
+	intervaldiv = setInterval(TextDisplay, 100);		
+	}else{
+	dtext = "Vous avez donc décidez d'aller " + direction ;
+	lengthtext =  dtext.length;
+	intervaldiv = setInterval(TextDisplay, 100);		
+	}
+	
+}
+function page7(){
+	
 	
 }
