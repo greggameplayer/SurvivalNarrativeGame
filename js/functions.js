@@ -154,7 +154,7 @@ function playerScenar()
 }
 function page2()
 {
-	dtext = " Deux heures avant le rendez-vous " + players[randomplayer] +" vous envoie par SMS l'adresse de la maison hantée.<br>Voici donc l'adresse qu'il vous a envoyé : Paris 13 rue de potier.<br>Vous attrapez à la volée l'équipement de votre choix";
+	dtext = " Deux heures avant le rendez-vous " + players[randomplayer] +" vous envoie par SMS l'adresse de la maison hantée.<br>Voici donc l'adresse qu'il vous a envoyé : Cumières le Mort Homme.<br>Vous attrapez à la volée l'équipement de votre choix";
 	lengthtext =  dtext.length;
 	intervaldiv = setInterval(TextDisplay, 100);
 }
@@ -255,6 +255,25 @@ function takeDirection(){
 	
 }
 function page7(){
+	var packobject;
+if (packchosen == 1){
+ packobject = "lampe torche";	
+ dtext = "Vous pénetrez dans une nouvelle pièce, mais il y règne une obscurité abyssale vous allumé "+ packobject;  	
+}else{
+	dtext= " Dans votre hâte, vous n'avez pas pensé à prendre de quoi vous éclairer vous devez évoluer dans le noir le plus complet. "
+}
+
+	
+}
+}
+function page7OnePlayerDeath(){
+	var randomtetanise = Math.floor(Math.random()* nbreplayers);
+	while(randomtetanise == randomplayer){
+		randomtetanise = Math.floor(Math.random()* nbreplayers);
+	}
+	dtext = "Vous êtes tétanisé devant ce spectacle macabre ,"+ players[randomtetanise] +  " et les autres sont complétements affolés. Vous prenez vos responsabilités et décidé de les rassurer et de quitté l'endroit au plus vite. En quittant les lieux un frisson vous parcourt toute le corps : Il vous a semblez que quelqu'un ou quelquechose vous faisait un signe depuis une des fenêtres. "; 
+	
+}
 	
 	
 }
@@ -269,9 +288,4 @@ function win(){
 	dtext = "<font size="15">Vous avez (presque) tous survécu,... vous avez gagné BRAVO";
 	lengthtext = dtext.length;
 	intervaldiv = setInterval(TextDisplay, 100);
-}
-
-function page7OnePlayerDeath(){
-	
-	
 }
