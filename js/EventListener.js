@@ -146,7 +146,7 @@ function onClickSubmitpackbutton()
 }
 function onClickGPSButton()
 {
-	if(document.getElementById("inputGPS").value.toLowerCase() == "paris 13 rue de potier"){
+	if(document.getElementById("inputGPS").value.toLowerCase() == "cumières le mort homme"){
 	document.body.removeChild(document.getElementById("inputGPS"));
 	document.body.removeChild(document.getElementById("GPSButton"));
 	page6();	
