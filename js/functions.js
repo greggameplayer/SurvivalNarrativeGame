@@ -278,10 +278,14 @@ function page7OnePlayerDeath(){
 	
 }
 
-function page7OnePlayerDeath(){
-	
-	
-}
 function gameover(){
-	
+	dtext = "<font size="15">Vous êtes mort,....GAME OVER</font>";
+	lengthtext = dtext.length;
+	intervaldiv = setInterval(TextDisplay, 100);
+}
+
+function win(){
+	dtext = "<font size="15">Vous avez (presque) tous survécu,... vous avez gagné BRAVO";
+	lengthtext = dtext.length;
+	intervaldiv = setInterval(TextDisplay, 100);
 }
