@@ -16,6 +16,10 @@ var substrtext1;
 var page = 2;
 var randomplayer;
 var realtimetopbox;
+var randomdeathpath;
+var randomdeathoneplayerpath;
+var randomallalive;
+var randomplayerdirectiondeath;
 //                                                                  Permet d'ouvrir la fenêtre de dialogue dans le but de selectionner une image de 64x64px
 //                                                          et créer un événement onChange pour détécter la fermeture et executer la fonction OnOpenFileDialogChange
 //                                                                                                              ↓↓↓
@@ -112,8 +116,16 @@ function TextSuppr(){
 		page++;
 		page2();
 	} else if(page == 6){
+		if(directionchosen == randomallalive){
 		page++;
 		page7();
+		}else if(directionchosen == randomdeathpath){
+		page++;
+		gameover();
+		}else{
+		page++;
+		page7OnePlayerDeath();	
+		}
 	}
 	}
 	countersuppr--;	
@@ -218,29 +230,39 @@ function Direction()
 	
 }
 function takeDirection(){
-	var randomdeathpath = Math.floor(Math.random()* 3) + 1;
+	randomdeathpath = Math.floor(Math.random()* 3) + 1;
+	randomdeathoneplayerpath = Math.floor(Math.random()*3) + 1;
+	while(randomdeathoneplayerpath == randomdeathpath){
+	randomdeathoneplayerpath = Math.floor(Math.random()*3) + 1;	
+	}
 	var direction;
 	if(directionchosen == 1){direction = "tout droit";}else if(directionchosen == 2){direction = "à droite";}else{direction = "à gauche";}
 	if(directionchosen == randomdeathpath){
 	dtext = "Vous avez donc décidez d'aller " + direction + ".<br>" + "Vous continuez votre chemin et vous vous aperçevez que vous êtes rentrés dans une piéce.<br>" + players[0] + " vous essayez d'ouvrir la porte par laquelle vous êtes entré mais rien à faire, elle s'est comme refermé à clé.<br>Ayant essayé de sortir par tout les moyens, vous finirez, vous et votre bandes d'amis mort de faim et de soif";
 	lengthtext =  dtext.length;
 	intervaldiv = setInterval(TextDisplay, 100);		
-	}else if(directionchosen == 1){
-	dtext = "Vous avez donc décidez d'aller " + direction ;
+	}else if(directionchosen == randomdeathoneplayerpath){
+	dtext = "Vous avez donc décidez d'aller " + direction + ".<br>" + "Vous continuez votre chemin et vous rentrez donc dans la prochaine pièce et vous aperçevez le cadavre de "  + players[randomplayer] + " gisant sur le sol.";
 	lengthtext =  dtext.length;
-	intervaldiv = setInterval(TextDisplay, 100);		
-	}else if(directionchosen == 2){
-	dtext = "Vous avez donc décidez d'aller " + direction ;
-	lengthtext =  dtext.length;
-	intervaldiv = setInterval(TextDisplay, 100);		
+	intervaldiv = setInterval(TextDisplay, 100);			
 	}else{
-	dtext = "Vous avez donc décidez d'aller " + direction ;
+	randomallalive = directionchosen;
+	dtext = "Vous avez donc décidez d'aller " + direction + ".<br>" + "Vous continuez votre chemin et vous rentrez dans une nouvelle pièce.";
 	lengthtext =  dtext.length;
-	intervaldiv = setInterval(TextDisplay, 100);		
+	intervaldiv = setInterval(TextDisplay, 100);	
+		
 	}
 	
 }
 function page7(){
 	
+	
+}
+
+function page7OnePlayerDeath(){
+	
+	
+}
+function gameover(){
 	
 }
